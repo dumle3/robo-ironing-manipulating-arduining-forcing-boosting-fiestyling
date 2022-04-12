@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -4.67, "left": 122.67, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": -148.83, "left": -84.69, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder2", "top": 45.77, "left": -82.66, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder3", "top": 188.49, "left": -80.63, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -211.59, "left": 401.33, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": -31.96, "left": 415.33, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": 112.76, "left": 422.35, "attrs": {} }
+  ],
+  "connections": [
+    [ "encoder1:CLK", "uno:A0", "green", [ "h0" ] ],
+    [ "encoder1:DT", "uno:A1", "green", [ "h0" ] ],
+    [ "encoder2:CLK", "uno:A2", "green", [ "h0" ] ],
+    [ "encoder2:DT", "uno:A3", "green", [ "h0" ] ],
+    [ "encoder3:CLK", "uno:A4", "green", [ "h0" ] ],
+    [ "encoder3:DT", "uno:A5", "green", [ "h0" ] ],
+    [ "encoder3:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "encoder3:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "encoder2:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "encoder2:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "encoder1:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "encoder1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "uno:9", "servo1:PWM", "green", [ "v0" ] ],
+    [ "uno:10", "servo2:PWM", "green", [ "v0" ] ],
+    [ "uno:11", "servo3:PWM", "green", [ "v0" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h0" ] ],
+    [ "servo2:V+", "uno:5V", "green", [ "h0" ] ],
+    [ "servo3:V+", "uno:5V", "green", [ "h0" ] ],
+    [ "servo3:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo2:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h0" ] ]
+  ]
+}
